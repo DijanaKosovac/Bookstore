@@ -1,0 +1,23 @@
+<div class="row">
+    <div class="col-2">
+        <img src="assets/images/books/{{book?.picture}}" width="80%">
+    </div>
+    <div class="col-10">
+        <h3>{{book?.name}}</h3>
+        <p>{{book?.description}}</p>
+        <b>{{book?.price}} $</b>
+        <b style="float: right;">{{book?.grade}} / 5</b>
+        <div *ngIf="book?.discount">
+            <img src="assets/images/discount.png" width="5%">
+        </div>
+        <div *ngIf="book?.bestseller">
+            <img src="assets/images/bestseller.jpg" width="5%">
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12">
+        <button class="btn btn-primary" style="float: right;" (click)='addBook(book)'>Add</button>
+    </div>
+</div>
+<hr>
